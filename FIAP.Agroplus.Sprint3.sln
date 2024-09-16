@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34701.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{CD8AC83A-7AC3-4102-B8AE-849B4E2A2588}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{2BAD9141-1292-4D0D-BFE9-D20DB2D95BD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{2FB0CEAA-92A0-45C1-8E6D-88D2613E30E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{82C1234C-F69D-4C41-9771-2AC57CDE5E1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Agroplus.Sprint3.API", "FIAP.Agroplus.Sprint3.API\FIAP.Agroplus.Sprint3.API.csproj", "{984B0B37-FE30-45FA-B965-12D2367297BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Agroplus.Sprint3.Application", "FIAP.Agroplus.Sprint3.Application\FIAP.Agroplus.Sprint3.Application.csproj", "{4C9D1E3A-A511-4EDF-A75D-E4C073E30A36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Agroplus.Sprint3.Domain", "FIAP.Agroplus.Sprint3.Domain\FIAP.Agroplus.Sprint3.Domain.csproj", "{0744DD4D-408C-4C5C-B9F4-45F9DF30073C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIAP.Agroplus.Sprint3.Infrastructure", "FIAP.Agroplus.Sprint3.Infrastructure.Data\FIAP.Agroplus.Sprint3.Infrastructure.csproj", "{F70C615E-43EB-4783-86D8-E7E17D3AFBA9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{984B0B37-FE30-45FA-B965-12D2367297BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984B0B37-FE30-45FA-B965-12D2367297BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984B0B37-FE30-45FA-B965-12D2367297BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984B0B37-FE30-45FA-B965-12D2367297BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C9D1E3A-A511-4EDF-A75D-E4C073E30A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C9D1E3A-A511-4EDF-A75D-E4C073E30A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C9D1E3A-A511-4EDF-A75D-E4C073E30A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C9D1E3A-A511-4EDF-A75D-E4C073E30A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0744DD4D-408C-4C5C-B9F4-45F9DF30073C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0744DD4D-408C-4C5C-B9F4-45F9DF30073C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0744DD4D-408C-4C5C-B9F4-45F9DF30073C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0744DD4D-408C-4C5C-B9F4-45F9DF30073C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F70C615E-43EB-4783-86D8-E7E17D3AFBA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F70C615E-43EB-4783-86D8-E7E17D3AFBA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F70C615E-43EB-4783-86D8-E7E17D3AFBA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F70C615E-43EB-4783-86D8-E7E17D3AFBA9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{984B0B37-FE30-45FA-B965-12D2367297BA} = {2BAD9141-1292-4D0D-BFE9-D20DB2D95BD1}
+		{4C9D1E3A-A511-4EDF-A75D-E4C073E30A36} = {2FB0CEAA-92A0-45C1-8E6D-88D2613E30E0}
+		{0744DD4D-408C-4C5C-B9F4-45F9DF30073C} = {CD8AC83A-7AC3-4102-B8AE-849B4E2A2588}
+		{F70C615E-43EB-4783-86D8-E7E17D3AFBA9} = {82C1234C-F69D-4C41-9771-2AC57CDE5E1F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2ADD73C-B833-4D26-80CE-DE99F055FEB4}
+	EndGlobalSection
+EndGlobal
