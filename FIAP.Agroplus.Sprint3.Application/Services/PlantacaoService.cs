@@ -8,15 +8,22 @@ namespace FIAP.Agroplus.Sprint3.Application.Servicesç
     public class PlantacaoService : IPlantacaoService
     {
         private readonly IPlantacaoRepository _plantacaoRepository;
+        private readonly IRegiaoRepository _regiaoRepository;
 
-        public PlantacaoService(IPlantacaoRepository plantacaoRepository)
+        public PlantacaoService(IPlantacaoRepository plantacaoRepository, IRegiaoRepository regiaoRepository)
         {
             _plantacaoRepository = plantacaoRepository;
+            _regiaoRepository = regiaoRepository;
         }
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            return await _plantacaoRepository.DeleteAsync(id);
+            var plantacao = await _plantacaoRepository.GetByIdAsync(id);
+
+            if (plantacao == null)
+                return false;
+            
+            return await _plantacaoRepository.DeleteAsync(plantacao);
         }
 
         public async Task<IEnumerable<PlantacaoModel>> GetAllAsync()
@@ -33,6 +40,12 @@ namespace FIAP.Agroplus.Sprint3.Application.Servicesç
 
         public async Task<bool> InsertAsync(PlantacaoModel model)
         {
+            var regiao = await _regiaoRepository.GetByIdAsync(model.RegiaoId);
+            
+            if (regiao == null)
+                return false;
+
+            model.Regiao = regiao.ToModel();
             return await _plantacaoRepository.InsertAsync(model.ToEntity());
         }
 
@@ -43,10 +56,15 @@ namespace FIAP.Agroplus.Sprint3.Application.Servicesç
             if(plantacao == null)
                 return false;
 
+            var regiao = await _regiaoRepository.GetByIdAsync(plantacao.RegiaoId);
+           
+            if (regiao == null)
+                return false;
+
             plantacao.CnpjProdutor = model.CnpjProdutor;
             plantacao.NomeProdutor = model.NomeProdutor;
             plantacao.DataAtualizacao = DateTimeOffset.Now;
-            plantacao.Regiao = model.Regiao.ToEntity();
+            plantacao.Regiao = regiao;
             plantacao.RegiaoId = model.RegiaoId;
 
             return await _plantacaoRepository.UpdateAsync(plantacao);

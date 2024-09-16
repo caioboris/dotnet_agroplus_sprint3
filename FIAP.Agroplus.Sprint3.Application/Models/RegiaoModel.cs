@@ -2,6 +2,7 @@
 
 public class RegiaoModel
 {
+    public Guid Id { get; set; }
     public string Nome { get; set; } = string.Empty;
     public string RegiaoBR { get; set; } = string.Empty;
     public string PlantioMaisFrequente { get; set; } = string.Empty;

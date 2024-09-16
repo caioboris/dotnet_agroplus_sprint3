@@ -17,7 +17,12 @@ namespace FIAP.Agroplus.Sprint3.Application.Servicesç
 
         public async Task<bool> DeleteAsync(Guid id)
         {
-            return await _regiaoRepository.DeleteAsync(id);
+            var regiao = await _regiaoRepository.GetByIdAsync(id);
+
+            if (regiao == null)
+                return false;
+
+            return await _regiaoRepository.DeleteAsync(regiao);
         }
 
         public async Task<IEnumerable<RegiaoModel>> GetAllAsync()

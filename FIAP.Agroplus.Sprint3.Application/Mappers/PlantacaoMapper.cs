@@ -9,6 +9,7 @@ public static class PlantacaoMapper
     {
         return new PlantacaoModel
         {
+            Id = entity.Id,
             CnpjProdutor = entity.CnpjProdutor,
             NomeProdutor = entity.NomeProdutor,
             Regiao = entity.Regiao.ToModel(),

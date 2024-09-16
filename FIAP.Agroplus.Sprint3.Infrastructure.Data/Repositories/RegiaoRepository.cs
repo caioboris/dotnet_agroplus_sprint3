@@ -14,9 +14,9 @@ public class RegiaoRepository : IRegiaoRepository
         _dataContext = dataContext;
     }
 
-    public async Task<bool> DeleteAsync(Guid id)
+    public async Task<bool> DeleteAsync(RegiaoEntity entity)
     {
-        _dataContext.Remove(id);
+        _dataContext.Remove(entity);
         var result = await _dataContext.SaveChangesAsync();
         return result > 0;
     }

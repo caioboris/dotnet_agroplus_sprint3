@@ -61,7 +61,7 @@ public class RegiaoController : ControllerBase
         };
    
         var result = await _regiaoService.InsertAsync(regiao);
-        return result ? BadRequest() : Ok(regiao);
+        return result ? Ok(regiao) : BadRequest();
     }
 
     /// <summary>
@@ -84,7 +84,7 @@ public class RegiaoController : ControllerBase
         };
 
         var result = await _regiaoService.UpdateAsync(id, regiao);
-        return result ? NotFound() : Ok(body);
+        return result ? Ok(body) : NotFound();
     }
 
     /// <summary>
@@ -97,6 +97,6 @@ public class RegiaoController : ControllerBase
     public async Task<IActionResult> Delete(Guid id)
     {
         var result = await _regiaoService.DeleteAsync(id);
-        return result ? NotFound() : Ok();
+        return result ? Ok() : NotFound() ;
     }
 }

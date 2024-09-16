@@ -2,6 +2,7 @@
 
 public class PlantacaoModel
 {
+    public Guid Id { get; set; }
     public Guid RegiaoId { get; set; }
     public RegiaoModel Regiao { get; set; } = new();
     public string NomeProdutor { get; set; } = string.Empty;
