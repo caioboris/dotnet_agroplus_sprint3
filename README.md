@@ -1,10 +1,10 @@
 # API de Cadastro e Consulta de Regiões de Plantio
 Integrantes do Grupo
 - Caio Boris RM552496
-- Denner Duarte RM
-- Matheus Paulo Lima Delgado RM
-- Nathaly Oliveira RM
-- Lucas Petroni
+- Denner Duarte RM551938
+- Matheus Paulo Lima Delgado RM552189
+- Nathaly Oliveira RM552538
+- Lucas Petroni RM97861
 
 **Descrição do Projeto**
 Esta API foi desenvolvida para gerenciar o cadastro e a busca de regiões de plantio. Ela segue uma arquitetura de microsserviços utilizando o padrão Onion Architecture para garantir uma separação clara entre as camadas da aplicação e facilitar a manutenção e escalabilidade do sistema.
