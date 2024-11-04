@@ -8,5 +8,4 @@ public record PlantacaoDTO
     public string NomeProdutor { get; set; } = string.Empty;
     public string CnpjProdutor { get; set; } = string.Empty;
     public decimal TamanhoEmHectares { get; set; }
-
 }
